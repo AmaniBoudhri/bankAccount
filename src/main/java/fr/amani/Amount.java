@@ -14,7 +14,7 @@ public class Amount {
     public static Amount ZERO = new Amount(0.0);
 
     public static Amount amountOf(Double value) throws NotPositiveAmount {
-        if (value < 0.0) {
+        if (value <= 0.0) {
             throw new NotPositiveAmount();
         }
         return new Amount(value);

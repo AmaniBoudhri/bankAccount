@@ -1,6 +1,5 @@
 package fr.amani;
 
-import fr.amani.exception.NotPositiveAmount;
 import lombok.SneakyThrows;
 import lombok.Value;
 
@@ -20,9 +19,6 @@ public class Transaction {
 
     @SneakyThrows
     public static Transaction createTransaction(Type type, Amount amount, LocalDate date) {
-        if (amount.getValue() <= 0.0) {
-            throw new NotPositiveAmount();
-        }
         return new Transaction(type, amount, date);
     }
 }

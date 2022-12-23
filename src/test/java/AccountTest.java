@@ -27,7 +27,7 @@ public class AccountTest {
     }
 
     @Test
-    public void should_deposit_and_retrieve_money() throws NotAllowedTransactionException, NotPositiveAmount {
+    public void should_retrieve_money() throws NotAllowedTransactionException, NotPositiveAmount {
 
 
         Account account = new Account();
