@@ -48,9 +48,7 @@ public class AccountTest {
     public void should_throw_exception_when_retrieve_money() {
         Account statement = new Account();
 
-        assertThrows(NotPositiveAmount.class, () -> {
-            statement.withdraw(Amount.amountOf(0.0), LocalDate.of(2022, 12, 23));
-        });
+        assertThrows(NotAllowedTransactionException.class, () -> statement.withdraw(Amount.amountOf(500.0), LocalDate.of(2022, 12, 23)));
 
     }
 }
